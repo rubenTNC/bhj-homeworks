@@ -1,13 +1,19 @@
 const popupMain = document.querySelector("#modal_main");
-const popupSucces = document.querySelector("#modal_main");
-const closePopup = document.querySelector(".modal__close");
+const popupSucces = document.querySelector("#modal_success");
+let closePopups = document.querySelectorAll(".modal__close");
+const showSuccess = document.querySelector(".show-success");
 
+popupMain.classList.add("modal_active");
 
-
-popup.classList.add("modal_active");
-
-
-
-closePopup.addEventListener("click", ()=> {
-    popup.classList.remove("modal_active");
+closePopups = Array.from(closePopups);
+closePopups.forEach((element) => element.addEventListener("click", () => element.parentElement.parentElement.classList.toggle("modal_active")));
+showSuccess.addEventListener("click", () => {
+    popupMain.classList.remove("modal_active");
+    popupSucces.classList.add("modal_active");
 });
+
+
+
+
+
+

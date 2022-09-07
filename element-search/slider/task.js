@@ -14,26 +14,14 @@ function render() {
 }
 
 btnNext.addEventListener("click", () => {
-    if (count < amountЕlements - 1) {
-        count++;
-        render();
-    } else {
-        count = 0;
-        render();
-        
-    }
-});
+    count < amountЕlements - 1 ? count++ : count = 0;
+    render();
+})
 
 btnPrev.addEventListener("click", () => {
-    if (count > 0) {
-        count--;
-        render();        
-    }
-    else {
-        count = amountЕlements - 1;
-        render();        
-    }
-});
+    count > 0 ? count-- : count = amountЕlements - 1;
+    render();
+})
 
 sliderDots.forEach((element) => {
     element.addEventListener("click", (event) => {

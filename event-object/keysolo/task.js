@@ -17,6 +17,14 @@ class Game {
   }
 
   registerEvents() {
+    window.addEventListener("keyup", (event) => {
+      if (this.currentSymbol.textContent === event.key || this.currentSymbol.textContent === event.key.toLocaleUpperCase() ) {
+        this.success()
+      } else {
+        this.fail();
+      }
+        // this.currentSymbol.textContent === event.key ? this.success(): this.fail();
+    });
     /*
       TODO:
       Написать обработчик события, который откликается

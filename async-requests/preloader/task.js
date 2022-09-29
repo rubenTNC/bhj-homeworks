@@ -15,7 +15,7 @@ requestExchangeRate.onreadystatechange = () => {
             items.innerHTML += 
             `
             <div class="item">
-            <div class="item__code">
+                <div class="item__code">
                     ${key}
                 </div>
                 <div class="item__value">
@@ -24,7 +24,7 @@ requestExchangeRate.onreadystatechange = () => {
                 <div class="item__currency">
                     руб.
                 </div>
-          </div>
+            </div>
             `
         };
     };
